@@ -4,8 +4,16 @@ def camelcase(word):
     # Slices don't produce index out of bounds errors.
     # So this still works on empty strings, strings of length 1
 
+def display_banner():
+    '''Display program in a banner'''
+    msg = 'AWESOME camelCaseGenerator PROGGRAM'
+    stars = '*' * len(msg)
+    print('\n', stars, '\n', msg, '\n', stars, '\n')
 
 def main():
+
+    display_banner()
+
     sentence = input('Enter your sentence:  ')
     words = sentence.split(' ')                               # Break by spaces
     camelcased_words = [ camelcase(word) for word in words ]  # camelCase everything
